@@ -2,7 +2,8 @@
 Vagrant box for Django development using Python 3.6.1. Also includes Postgres 9.5.6, Elasticsearch 5.4.0, Redis 3.0.6 and nginx 1.10.0.
 
 ## Base Box
-Based on Ubuntu 16.04 available from:
+Based on Ubuntu 16.04 grabbed from:
+
 [https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04](https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04)
 
 ## Ubuntu Packages
@@ -35,25 +36,24 @@ Based on Ubuntu 16.04 available from:
 - Run `vagrant ssh` to login.
 
 ## Work Directory Structure
-The main work directory for Django development is `/opt/work`
+The main work directory for Django development is `/opt/work` and is structured as follows:
 
-This directory is structured as follows:
-
-- env: All virtualenvs can be created here
-  - default: A blank default virtualenv with no packages installed
-- src: All your projects source code directories can be stored here
+- `/opt/work`: Main work directory
+  - `/opt/work/env`: All virtualenvs can be created here
+    - `/opt/work/env/default`: A default (blank) virtualenv with no packages installed
+  - `/opt/work/src`: All your project source code directories can be stored here
 
 ## Shortcuts
-### Work Directory
+### Switch to Work Directory
 `cd ~WORK`
 
-### Virtual Environments Directory
+### Switch to Virtual Environments Directory
 `cd ~ENV`
 
-### Source Code Directory
+### Switch to Source Code Directory
 `cd ~SRC`
 
-### Default Virtual Environment (no packages installed)
+### Default Virtual Environment (No Packages Installed)
 `activate-default` to activate
 
 `deactivate` to deactivate
@@ -68,4 +68,3 @@ The following ports are forwarded to the host operating system:
 
 ## Synced Folders
 The source code directory root is exported to the host operating system.
-
