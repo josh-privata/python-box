@@ -1,0 +1,5 @@
+# The project source code directory needs to exist
+# but it's contents should be ignored and never be
+# committed into the django-box repo
+*
+!.gitignore
