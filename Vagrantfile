@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
     config.vm.box = "nomadjourney-django"
     config.vm.box_url = "https://nomadjourney-vagrant.s3.amazonaws.com/django.box"
     config.vm.box_check_update = false
-    config.vm.hostname = "django"
+    config.vm.hostname = "django-box"
 
     # forwarded ports
     config.vm.network "forwarded_port", guest: 5432, host: 5432     # PostgreSQL
@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
 
     # virtualbox config
     config.vm.provider "virtualbox" do |vb|
-        vb.name = "django"
+        vb.name = "django-box"
         vb.cpus = 1
         vb.memory = "2048"
     end
