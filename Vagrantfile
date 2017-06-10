@@ -1,8 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 Vagrant.configure("2") do |config|
-    config.vm.box = "nomadjourney-django"
-    config.vm.box_url = "https://nomadjourney-vagrant.s3.amazonaws.com/django.box"
+    config.vm.box = "bento/ubuntu-16.04"
     config.vm.box_check_update = false
     config.vm.hostname = "django-box"
 
@@ -17,7 +16,8 @@ Vagrant.configure("2") do |config|
 
     # synced folders
     config.vm.synced_folder ".", "/vagrant", :disabled => true
-    config.vm.synced_folder "src", "/opt/work/src/"
+    config.vm.synced_folder "salt/", "/srv/salt/"
+    config.vm.synced_folder "src/", "/opt/work/src/"
 
     # virtualbox config
     config.vm.provider "virtualbox" do |vb|
@@ -25,4 +25,13 @@ Vagrant.configure("2") do |config|
         vb.cpus = 1
         vb.memory = "2048"
     end
+
+    # salt provisioning
+    config.vm.provision :salt do |salt|
+        salt.masterless = true
+        salt.minion_config = "salt/minion.local"
+        salt.colorize = true
+        salt.run_highstate = true
+    end
 end
+
