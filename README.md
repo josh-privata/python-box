@@ -27,7 +27,7 @@ Based on Ubuntu 16.04 box from: [https://atlas.hashicorp.com/bento/boxes/ubuntu-
 - python3.6-venv
 
 ## Python Packages
-- pip: 9.0.1
+- pip (latest)
 
 ## Misc. Tools
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
