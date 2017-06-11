@@ -48,3 +48,10 @@ alias redis-logs="sudo journalctl -f --unit redis-server"
 alias omz-conf="vim ~/.oh-my-zsh"
 alias vim-conf="vim ~/.vimrc"
 alias zsh-conf="vim ~/.zshrc"
+
+# source custom zsh scripts
+if [ -d $HOME/.zshrc.d ]; then
+    for file in $HOME/.zshrc.d/*.zsh; do
+        source $file
+    done
+fi
