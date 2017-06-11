@@ -10,9 +10,7 @@ Vagrant box for Python/Django development using Python 3.6.x. Also includes Post
 - Run `vagrant ssh` to login once the box is up and running.
 
 ## Base Box
-Based on Ubuntu 16.04 box from:
-
-[https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04](https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04)
+Based on Ubuntu 16.04 box from: [https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04](https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04)
 
 ## Ubuntu Packages
 - build-essential
