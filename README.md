@@ -1,5 +1,5 @@
-# django-box
-Vagrant box for Django/Python development using Python 3.6.x. Also includes Postgres 9.5.x, Elasticsearch 5.4.x and Redis 3.0.x.
+# python-box
+Vagrant box for Python/Django development using Python 3.6.x. Also includes Postgres 9.5.x, Elasticsearch 5.4.x and Redis 3.0.x.
 
 ## Getting Started
 - [Download and install Vagrant](https://www.vagrantup.com/downloads.html)
