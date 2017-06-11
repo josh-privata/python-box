@@ -5,7 +5,7 @@ Vagrant box for Python/Django development using Python 3.6.x. Also includes Post
 - [Download and install Vagrant](https://www.vagrantup.com/downloads.html)
 - [Download and install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - Clone the repo
-- `cd django-box`
+- `cd python-box`
 - Run `vagrant up` to download and provision the Vagrant box. This step can take a little while so please hang tight.
 - Run `vagrant ssh` to login once the box is up and running.
 
