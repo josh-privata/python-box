@@ -50,6 +50,7 @@ alias vim-conf="vim ~/.vimrc"
 alias zsh-conf="vim ~/.zshrc"
 
 # source custom zsh scripts
+setopt null_glob
 if [ -d $HOME/.zshrc.d ]; then
     for file in $HOME/.zshrc.d/*.zsh; do
         source $file
