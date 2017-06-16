@@ -49,6 +49,13 @@ alias omz-conf="vim ~/.oh-my-zsh"
 alias vim-conf="vim ~/.vimrc"
 alias zsh-conf="vim ~/.zshrc"
 
+# create and set up default virtualenv
+# if it doesn't exist
+if [[ ! -d $WORK/env/default ]]; then
+    cd $WORK/env
+    /usr/bin/python3.6 -m venv default
+fi
+
 # source custom zsh scripts
 setopt null_glob
 if [ -d $HOME/.zshrc.d ]; then
