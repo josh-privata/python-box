@@ -2,6 +2,7 @@ base:
     '*':
         - base
         - elasticsearch
+        - nodejs
         - postgres
         - python
         - redis
