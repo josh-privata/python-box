@@ -28,5 +28,5 @@ vundle-git:
 
 bundle-install:
     cmd.run:
-        - name: "vim +PluginInstall +qall"
+        - name: "/usr/bin/vim +PluginInstall +qall"
         - runas: {{ pillar['user'] }}

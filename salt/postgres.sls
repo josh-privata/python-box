@@ -22,5 +22,5 @@ pg_hba.conf:
 
 postgresql-restart:
     cmd.run:
-        - name: "systemctl restart postgresql.service"
+        - name: "/bin/systemctl restart postgresql.service"
         - order: last
