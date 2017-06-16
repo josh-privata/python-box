@@ -8,7 +8,14 @@ python-packages:
             - python3.6
             - python3.6-dev
             - python3.6-venv
+            - python-pip
+            - python-pip-whl
+
+pip-upgrade:
+    cmd.run:
+        - name: "/usr/bin/pip install --upgrade pip"
 
 pip-get-pip:
     cmd.run:
-        - name: "curl https://bootstrap.pypa.io/get-pip.py | python3.6 -"
+        - name: "/usr/bin/curl https://bootstrap.pypa.io/get-pip.py | python3.6 -"
+        - reload_modules: true
