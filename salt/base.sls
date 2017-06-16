@@ -1,10 +1,6 @@
 apt-update:
     cmd.run:
-        - name: "apt-get update"
-
-apt-upgrade:
-    cmd.run:
-        - name: "apt-get -y upgrade"
+        - name: "/usr/bin/apt-get update"
 
 base-packages:
     pkg.installed:
